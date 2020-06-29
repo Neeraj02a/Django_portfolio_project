@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+] #+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+#with this code we are not able to fire the server, but once the server is fire we can eddit it to see the picture
+
+
